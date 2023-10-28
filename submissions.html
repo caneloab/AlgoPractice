@@ -1,0 +1,81 @@
+<!-- https://www.hackerrank.com/challenges/welcome-to-java/problem -->
+<!-- Above is the link to the challange -->
+
+// create a class called "Solution"
+public class Solution {
+// prints out "Hello, World." and "Hello, Java."
+    public static void main(String[] args) {
+        System.out.println("Hello, World.");
+        System.out.println("Hello, Java.");
+    }
+}
+
+<!-- https://www.hackerrank.com/challenges/java-stdin-and-stdout-1/problem -->
+<!-- Above is the link to the challange -->
+
+import java.util.*;
+ <!-- create Solution class -->
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        <!-- creates an array  -->
+        int inputArray[]=new int[3];
+         <!-- when the integer in the array is equal to 0, or less than 3, the value of the integer will increase by 1 -->
+        for (int i=0; i<3; i++){
+            int a = scan.nextInt();
+            inputArray[i]=a;
+        }
+        
+        scan.close();
+
+        for (int num:inputArray){
+            System.out.println(num);
+        }
+    }
+}
+
+<!-- https://www.hackerrank.com/challenges/java-if-else/problem -->
+<!-- Above is the link to the challange -->
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int N = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        scanner.close();
+         <!-- if N does not equal to 0 when divided down, print out "Weird" -->
+        if (N%2 !=0){
+            System.out.println("Weird");
+        }
+        else{
+             <!-- if N is greater than or equal to 2 and less than or equal to 5, prints out "Not Weird" -->
+            if(N >=2 && N<=5){
+                System.out.println("Not Weird");
+            }
+            else{
+                 <!-- if N is greater than or equal to 6 and less than or equal to 20, prints out "Weird" -->
+                if(N >= 6 && N <= 20){
+                    System.out.println("Weird");
+                }
+                else{
+                     <!-- If anything else, prints out "Not Weird" -->
+                    System.out.println("Not Weird");
+                }
+            }
+        }
+    }
+}
